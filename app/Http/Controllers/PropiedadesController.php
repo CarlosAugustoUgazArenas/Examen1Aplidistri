@@ -15,7 +15,7 @@ class PropiedadesController extends Controller
     {
        $texto=trim($request->get('texto'));
        $propiedades=DB::table('propiedades')
-                    ->select('id','nombre')
+                    ->select('id','nombre','direccion','caracteristicas','estado','precio')
                     ->where('nombre','LIKE','%'.$texto.'%')
                     ->orderBy('id','desc')
                     ->paginate(3);
@@ -39,6 +39,10 @@ class PropiedadesController extends Controller
     {
         $registro = new Propiedades;
         $registro->nombre=$request->input('nombre');
+        $registro->direccion=$request->input('direccion');
+        $registro->caracteristicas=$request->input('caracteristicas');
+        $registro->estado=$request->input('estado');
+        $registro->precio=$request->input('precio');
         $registro->save();
         return redirect()->route('propiedades.index')->with('mensaje','Registro exitoso');
     }

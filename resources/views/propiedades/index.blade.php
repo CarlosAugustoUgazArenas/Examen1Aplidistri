@@ -54,7 +54,7 @@
                           <td colspan="3">No hay resultados</td>
                         </tr>
                         @else
-                        @foreach($Propiedades as $reg)
+                        @foreach($propiedades as $reg)
                         <tr>
                           <td><a href="/" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> </a>
                             <button type="button" data-toggle="modal" data-target="#modal-eliminar-{{$reg->id}}"
