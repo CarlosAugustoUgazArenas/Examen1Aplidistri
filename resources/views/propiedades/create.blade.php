@@ -13,7 +13,7 @@
                   <h5 class="m-0">Propieades </h5>
                 </div>
                 <div class="card-body">
-                  <form method="POST" action="{{route('categoria.store')}}">
+                  <form method="POST" action="{{route('propiedades.store')}}">
                     @csrf
                     <div class="row">
                       <div class="col-lg-12">

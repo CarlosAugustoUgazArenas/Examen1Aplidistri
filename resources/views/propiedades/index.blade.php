@@ -35,7 +35,7 @@
                       </button>
                   </div>
                   @endif
-                  @if(count($Propiedades)<=0)
+                  @if(count($propiedades)<=0)
                   <div class="alert alert-secondary mt-2" role="alert">
                     No hay registros para mostrar
                   </div>
@@ -49,7 +49,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @if(count($Propiedades)<=0)
+                        @if(count($propiedades)<=0)
                         <tr>
                           <td colspan="3">No hay resultados</td>
                         </tr>
@@ -67,7 +67,7 @@
                         @endif
                       </tbody>
                     </table>
-                    {{$categorias->appends(["texto" => $texto ])}}
+                    {{$propiedades->appends(["texto" => $texto ])}}
                   </div>
                 </div>
               </div>
