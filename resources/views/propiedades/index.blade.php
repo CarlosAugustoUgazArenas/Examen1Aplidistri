@@ -46,6 +46,10 @@
                         <tr>
                           <th style="width: 20%">Opciones</th>
                           <th style="width: 80%">Nombre</th>
+                          <th style="width: 80%">Direccion</th>
+                          <th style="width: 80%">Caracteristicas</th>
+                          <th style="width: 80%">Estado</th>
+                          <th style="width: 80%">Precio</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -61,6 +65,10 @@
                               class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
                           </td>
                           <td>{{$reg->nombre}}</td>
+                          <td>{{$reg->direccion}}</td>
+                          <td>{{$reg->caracteristicas}}</td>
+                          <td>{{$reg->estado}}</td>
+                          <td>{{$reg->precio}}</td>
                         </tr>
                         @include('propiedades.delete')
                           @endforeach
